@@ -15,4 +15,4 @@ TwinCAT 3 training project with:
 TwinCAT XAE is required to create the real solution, compile, activate, download,
 run, debug, and build the visualizations.
 
-Start with `docs/BUILD_IN_TWINCAT.md`.
+`docs/BUILD_IN_TWINCAT.md`.
