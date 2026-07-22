@@ -1,4 +1,5 @@
 # TwinCAT Conveyor Starter
+#Omar Ahmed
 
 A beginner TwinCAT 3 conveyor simulation with Start, Stop, Reset, Emergency Stop,
 automatic part sensing, part counting, machine states, and HMI-ready variables.
