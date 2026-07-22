@@ -18,7 +18,54 @@ VAR
     bStartMemory    : BOOL;
 END_VAR]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[// Emergency Stop has the highest priority
+IF bEmergencyStop THEN
+    stStatus.eState := E_MachineState.Faulted;
+END_IF;
+
+// Reset clears the fault
+IF bReset THEN
+    stStatus.eState := E_MachineState.Stopped;
+END_IF;
+
+// Main machine state
+CASE stStatus.eState OF
+
+    E_MachineState.Stopped:
+
+        stStatus.bMotorRunning := FALSE;
+
+        IF bStart THEN
+            stStatus.eState := E_MachineState.Starting;
+        END_IF
+
+
+    E_MachineState.Starting:
+
+        stStatus.bMotorRunning := TRUE;
+        stStatus.eState := E_MachineState.Running;
+
+
+    E_MachineState.Running:
+
+        stStatus.bMotorRunning := TRUE;
+
+        IF bStop THEN
+            stStatus.eState := E_MachineState.Stopping;
+        END_IF
+
+
+    E_MachineState.Stopping:
+
+        stStatus.bMotorRunning := FALSE;
+        stStatus.eState := E_MachineState.Stopped;
+
+
+    E_MachineState.Faulted:
+
+        stStatus.bMotorRunning := FALSE;
+
+END_CASE;]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
