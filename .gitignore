@@ -1,0 +1,12 @@
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.tpy
+*.tmc
+*.compileinfo
+*.bootdata
+*.bootdata-old
+Thumbs.db
+Desktop.ini
