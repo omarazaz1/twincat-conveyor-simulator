@@ -1,6 +1,6 @@
 # TwinCAT Conveyor Cell Simulator
 
-Clean TwinCAT 3 training project with:
+TwinCAT 3 training project with:
 
 - Start, Stop, Reset, and Emergency Stop
 - Conveyor motor logic
