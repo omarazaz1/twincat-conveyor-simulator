@@ -15,16 +15,22 @@ VAR_OUTPUT
 END_VAR
 
 VAR
-    bStartMemory    : BOOL;
+    rStart : R_TRIG;
+    rStop  : R_TRIG;
+    rReset : R_TRIG;
 END_VAR]]></Declaration>
     <Implementation>
-      <ST><![CDATA[// Emergency Stop has the highest priority
+      <ST><![CDATA[rStart(CLK := bStart);
+rStop(CLK := bStop);
+rReset(CLK := bReset);
+
+// Emergency Stop has the highest priority
 IF bEmergencyStop THEN
     stStatus.eState := E_MachineState.Faulted;
 END_IF;
 
 // Reset clears the fault
-IF bReset THEN
+IF rReset.Q THEN
     stStatus.eState := E_MachineState.Stopped;
 END_IF;
 
@@ -35,7 +41,7 @@ CASE stStatus.eState OF
 
         stStatus.bMotorRunning := FALSE;
 
-        IF bStart THEN
+        IF rStart.Q THEN
             stStatus.eState := E_MachineState.Starting;
         END_IF
 
@@ -50,7 +56,7 @@ CASE stStatus.eState OF
 
         stStatus.bMotorRunning := TRUE;
 
-        IF bStop THEN
+        IF rStop.Q THEN
             stStatus.eState := E_MachineState.Stopping;
         END_IF
 
