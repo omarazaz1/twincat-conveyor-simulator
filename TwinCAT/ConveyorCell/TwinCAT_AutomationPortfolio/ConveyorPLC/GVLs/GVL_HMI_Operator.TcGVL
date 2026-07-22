@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
+  <GVL Name="GVL_HMI_Operator" Id="{4bd4f901-d14e-49f6-b166-54eff4301464}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+
+    //==============================
+    // Operator Commands
+    //==============================
+
+    bStartCommand      : BOOL := FALSE;
+    bStopCommand       : BOOL := FALSE;
+    bResetCommand      : BOOL := FALSE;
+    bEmergencyStop     : BOOL := FALSE;
+
+    //==============================
+    // Status shown on the HMI
+    //==============================
+
+    stStatus           : ST_ConveyorStatus;
+
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>
