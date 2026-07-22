@@ -8,5 +8,7 @@ obj/
 *.compileinfo
 *.bootdata
 *.bootdata-old
+*.plcproj.bak
+*.tsproj.bak
 Thumbs.db
 Desktop.ini

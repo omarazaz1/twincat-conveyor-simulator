@@ -1,13 +1,18 @@
-# TwinCAT Conveyor Starter
-#Omar Ahmed
+# TwinCAT Conveyor Cell Simulator
 
-A beginner TwinCAT 3 conveyor simulation with Start, Stop, Reset, Emergency Stop,
-automatic part sensing, part counting, machine states, and HMI-ready variables.
+Clean TwinCAT 3 training project with:
 
-VS Code is used to edit the Structured Text source. TwinCAT XAE is still used to
-create PLC objects, compile, download, monitor, and run the application.
+- Start, Stop, Reset, and Emergency Stop
+- Conveyor motor logic
+- Entry and exit sensors
+- Automatic part simulation
+- Part counter
+- Machine states and fault handling
+- Operator HMI
+- Engineering HMI
+- Git/GitHub-ready structure
 
-See:
-- `docs/SETUP_AND_RUN.md`
-- `docs/HMI_BUILD.md`
-- `docs/GITHUB.md`
+TwinCAT XAE is required to create the real solution, compile, activate, download,
+run, debug, and build the visualizations.
+
+Start with `docs/BUILD_IN_TWINCAT.md`.
