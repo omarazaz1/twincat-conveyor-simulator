@@ -1,1 +1,0 @@
-import{Binding,Functions}from"Beckhoff.TwinCAT.HMI.Framework/index.esm.js";export function CheckBinding(control,propertyName){return!!Binding.exists(propertyName,control)}Functions.registerFunctionEx("CheckBinding","TcHmi.Functions.Beckhoff",CheckBinding,{injectInGlobalObject:!0});

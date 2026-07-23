@@ -12,3 +12,55 @@ obj/
 *.tsproj.bak
 Thumbs.db
 Desktop.ini
+# -------------------------
+# Visual Studio
+# -------------------------
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.userprefs
+
+# -------------------------
+# TwinCAT
+# -------------------------
+*.~u
+*.tpy
+*.compileinfo
+*.bak
+*.tmp
+*.log
+
+# TwinCAT generated folders
+_Boot/
+_Compile/
+Temp/
+
+# -------------------------
+# NuGet / Packages
+# -------------------------
+packages/
+Packages/
+
+# -------------------------
+# Node
+# -------------------------
+node_modules/
+
+# -------------------------
+# Windows
+# -------------------------
+Thumbs.db
+Desktop.ini
+
+# -------------------------
+# Logs
+# -------------------------
+*.log
+
+# -------------------------
+# Build output
+# -------------------------
+dist/
+build/

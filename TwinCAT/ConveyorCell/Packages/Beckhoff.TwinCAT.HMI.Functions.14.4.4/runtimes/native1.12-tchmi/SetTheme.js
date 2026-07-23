@@ -1,1 +1,0 @@
-import{Functions,Theme}from"Beckhoff.TwinCAT.HMI.Framework/index.esm.js";export function SetTheme(themeName){Theme.set(themeName)}Functions.registerFunctionEx("SetTheme","TcHmi.Functions.Beckhoff",SetTheme,{injectInGlobalObject:!0});
